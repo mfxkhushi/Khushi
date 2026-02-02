@@ -1,0 +1,130 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(5px, 2vw, 10px) clamp(15px, 4vw, 30px);
+  height: 120px;
+  background-color: #1d1b1c;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.home-link {
+  text-decoration: none;
+}
+
+.back-icon {
+  width: clamp(70px, 12vw, 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.back-icon img {
+  max-width: clamp(60px, 10vw, 50px);
+  max-height: clamp(60px, 10vw, 70px);
+  object-fit: contain;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  max-width: clamp(120px, 35vw, 220px);
+  max-height: clamp(60px, 10vw, 100px);
+  object-fit: contain;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: clamp(5px, 2vw, 8px) clamp(10px, 3vw, 20px);
+    height: 100px;
+  }
+
+  .back-icon {
+    width: clamp(60px, 10vw, 70px);
+    height: clamp(60px, 10vw, 70px);
+  }
+
+  .back-icon img {
+    max-width: clamp(50px, 8vw, 60px);
+    max-height: clamp(50px, 8vw, 60px);
+  }
+
+  .logo {
+    max-width: 60%;
+  }
+
+  .logo img {
+    max-width: clamp(100px, 30vw, 180px);
+    max-height: clamp(50px, 8vw, 80px);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .navbar {
+    padding: clamp(3px, 1vw, 5px) clamp(8px, 2vw, 15px);
+    height: 90px;
+  }
+
+  .back-icon {
+    width: clamp(50px, 9vw, 60px);
+    height: clamp(50px, 9vw, 60px);
+  }
+
+  .back-icon img {
+    max-width: clamp(40px, 7vw, 50px);
+    max-height: clamp(40px, 7vw, 50px);
+  }
+
+  .logo {
+    max-width: 70%;
+  }
+
+  .logo img {
+    max-width: clamp(80px, 25vw, 140px);
+    max-height: clamp(40px, 7vw, 70px);
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1920px) {
+  .navbar {
+    height: 130px;
+    padding: 10px 40px;
+  }
+
+  .back-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .back-icon img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .logo {
+    max-width: 40%;
+  }
+
+  .logo img {
+    max-width: 260px;
+    max-height: 110px;
+  }
+}

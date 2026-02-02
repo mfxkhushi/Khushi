@@ -1,0 +1,86 @@
+.outlets-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        background-color: #000000;
+        position: relative;
+        overflow: hidden;
+}
+
+.back-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-icon:hover {
+        transform: scale(1.2);
+        opacity: 0.8;
+}
+
+.outlets-logo {
+        max-width: 400px;
+        /* Increased width */
+        max-height: 200px;
+        /* Increased height */
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 26px;
+        flex-wrap: wrap;
+}
+
+.floor-button {
+        padding: 12px 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000000;
+        background: linear-gradient(to right, #b1873b, #eac26b);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        min-width: 120px;
+        text-align: center;
+}
+
+.floor-button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+        background: linear-gradient(45deg, #ebac00, #ffe51e);
+}
+
+.floor-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+        .buttons-container {
+                gap: 10px;
+        }
+
+        .floor-button {
+                min-width: 100px;
+                padding: 10px 15px;
+                font-size: 14px;
+        }
+
+        .outlets-logo {
+                max-width: 140px;
+                max-height: 160px;
+        }
+}

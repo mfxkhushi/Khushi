@@ -1,0 +1,72 @@
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overlay-bar {
+  position: absolute;
+  bottom: 8%; /* moved from top: 40% to bottom: 8% */
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-bar img {
+  height: 3rem;
+  animation: zoomEffect 3s ease-in-out infinite;
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+  font-family: 'Poppins',sans-serif;
+
+}
+
+.start-btn {
+  text-shadow: 2px 2px #000000;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}

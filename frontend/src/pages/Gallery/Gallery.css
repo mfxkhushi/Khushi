@@ -1,0 +1,133 @@
+.gallery-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1b1c;
+  overflow: hidden;
+}
+
+.gallery-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.glry {
+  font-size: 4rem;
+  color: #eac26b;
+  margin: 0;
+  font-family: 'Poppins', serif;
+  padding-bottom: 10px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.gallery-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+  gap: 50px;
+}
+
+.gallery-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #b1873b, #eac26b);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-btn:hover {
+  background: linear-gradient(to right, #a7781e, #e0bc5f);
+}
+
+.gallery-btn.active {
+  background: linear-gradient(to right, #ffd700, #ffb700);
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-buttons {
+    gap: 12px;
+  }
+
+  .gallery-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-buttons {
+    gap: 12px;
+  }
+
+  .gallery-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

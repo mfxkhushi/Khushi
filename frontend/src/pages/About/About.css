@@ -1,0 +1,214 @@
+/* =========================
+   PAGE BASE
+========================= */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.about-content {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  padding: 40px 60px;
+  align-items: flex-start;
+}
+
+/* =========================
+   LEFT TEXT SECTION
+========================= */
+.about-text {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  color: #eac26b;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #f2f2f2;
+}
+
+/* =========================
+   RIGHT PROJECT SECTION
+========================= */
+.about-projects {
+  flex: 1;
+  display: flex;
+  min-width: 500px; /* prevents collapse */
+  gap: 20px;
+}
+
+/* =========================
+   PROJECT CARD
+========================= */
+.project-card {
+  flex: 1;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  min-height: 480px; /* ensures all cards same height */
+  border-radius: 12px;
+}
+
+.project-card.completed {
+  background-color: #b6cf5c;
+  color: #000;
+}
+
+.project-card.ongoing {
+  background-color: #19d1c3;
+  color: #000;
+}
+
+/* PROJECT TITLE */
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+/* =========================
+   FLIPPER / SLIDER - FIXED
+========================= */
+.flipper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px; /* fixed height for all sliders */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.flipper-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* IMAGE - FIXED */
+.flipper-image {
+  width: 100%; /* Each slide takes full width */
+  height: 100%;
+  object-fit: contain; /* Image fits without cropping */
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+/* =========================
+   ARROWS
+========================= */
+.flipper-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  z-index: 2;
+}
+
+.flipper-arrow.left {
+  left: 10px;
+}
+
+.flipper-arrow.right {
+  right: 10px;
+}
+
+/* =========================
+   CAPTION BOX BELOW SLIDER
+========================= */
+.caption-box {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 6px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-projects {
+    min-width: 100%;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .project-card {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flipper-wrapper {
+    height: 220px;
+  }
+
+  .about-content {
+    padding: 25px;
+  }
+
+  .project-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .flipper-wrapper {
+    height: 180px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .caption-box {
+    font-size: 0.85rem;
+    min-height: 35px;
+  }
+
+  .about-content {
+    padding: 15px;
+  }
+}

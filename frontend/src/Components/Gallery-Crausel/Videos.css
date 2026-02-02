@@ -1,0 +1,68 @@
+.videos-gallery-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.video-thumb {
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb:hover {
+  transform: scale(1.05);
+}
+
+.video-zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.zoomed-video-wrapper {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoomed-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.close-video-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+
+.close-video-btn:hover {
+  background: red;
+  color: white;
+}

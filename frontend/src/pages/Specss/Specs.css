@@ -1,0 +1,285 @@
+.specs-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #1d1b1c;
+  box-sizing: border-box;
+}
+
+.specs-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  max-height: calc(100vh - 140px);
+  /* Navbar (80px) + Footer (60px) */
+  overflow: hidden;
+}
+
+.specs-title {
+  color: #eac26b;
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  text-align: center;
+  margin: 1.5vh 0;
+  font-family: 'Poppins', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.specs-scroll-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  height: 70vh;
+  /* Adjusted to fit within container */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.specs-scroll-container {
+  display: flex;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  height: 100%;
+  align-items: flex-start; /* Changed from center to flex-start */
+  padding: 1vh 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  touch-action: pan-x;
+  /* Enable touch scrolling */
+}
+
+.specs-scroll-container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+.specs-card {
+  min-width: clamp(200px, 25vw, 260px);
+  max-width: clamp(240px, 28vw, 280px);
+  /* Fixed height for all cards */
+  height: 400px; /* Fixed height - adjust as needed */
+  background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from space-between to flex-start */
+}
+
+.specs-card.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.specs-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.specs-card h2 {
+  background: linear-gradient(90deg, #00b2ac, #00d4cc);
+  color: #fff;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  min-height: 60px; /* Ensure consistent title height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specs-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #e0e0e0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling within the list */
+  padding-right: 5px;
+  max-height: calc(100% - 80px); /* Adjust based on title height */
+}
+
+/* Custom scrollbar for the list */
+.specs-card ul::-webkit-scrollbar {
+  width: 4px;
+}
+
+.specs-card ul::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.specs-card ul::-webkit-scrollbar-thumb {
+  background: #00b2ac;
+  border-radius: 4px;
+}
+
+.specs-card li {
+  margin-bottom: 0.75rem; /* Increased spacing */
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.4;
+}
+
+.specs-card li:last-child {
+  margin-bottom: 0;
+}
+
+.specs-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00b2ac;
+  font-size: 1.2rem;
+}
+
+:where(nav) {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  max-height: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+:where(footer) {
+  width: 100%;
+  max-height: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .specs-card {
+    height: 380px; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .specs-container {
+    padding: 0 3vw;
+    max-height: calc(100vh - 120px);
+    /* Adjusted for smaller navbar/footer */
+  }
+
+  .specs-title {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+
+  .specs-scroll-wrapper {
+    height: 65vh;
+  }
+
+  .specs-card {
+    min-width: clamp(180px, 40vw, 220px);
+    max-width: clamp(200px, 45vw, 240px);
+    height: 350px; /* Adjusted for mobile */
+  }
+
+  .specs-card h2 {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    min-height: 55px;
+  }
+
+  .specs-card ul {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  :where(nav) {
+    max-height: 70px;
+  }
+
+  :where(footer) {
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specs-container {
+    padding: 0 2vw;
+  }
+
+  .specs-scroll-wrapper {
+    height: 60vh;
+  }
+
+  .specs-card {
+    min-width: clamp(160px, 50vw, 200px);
+    max-width: clamp(180px, 55vw, 220px);
+    height: 320px; /* Smaller for mobile */
+  }
+
+  .specs-card h2 {
+    min-height: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .specs-title {
+    font-size: 2.5rem;
+  }
+
+  .specs-scroll-wrapper {
+    max-width: 1400px;
+  }
+
+  .specs-card {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 1.75rem;
+    height: 450px; /* Larger for big screens */
+  }
+
+  .specs-card h2 {
+    font-size: 1.75rem;
+    min-height: 70px;
+  }
+
+  .specs-card ul {
+    font-size: 1rem;
+  }
+}
