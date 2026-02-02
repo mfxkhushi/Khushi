@@ -12,6 +12,7 @@ import Specs from './pages/Specss/Specs';
 import Amenities from './pages/Amenities/Amenities';
 import Plans from './pages/Plans/Plans'
 import WhyGreen from './pages/WhyGreenBuilding/WhyGreen';
+import FloorPage from './pages/FloorPage/FloorPage'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/plans" element={<Plans />} />
          <Route path="/why-green-building" element={<WhyGreen />} />
+        <Route path="/floor-plan/:planType" element={<FloorPage />}/>
 
       </Routes>
     </Router>

@@ -1,0 +1,18 @@
+{
+  "tower1": [
+    "/Tower1/1 TOWER 1 GROUND FLOOR PLAN.png",
+    "/Tower1/3 TOWER 1 UNIT PLAN TYPE 1.png",
+  "/Tower1/4 TOWER 1 UNIT PLAN TYPE 2.png",
+  "/Tower1/10 TOWER 1 22ND DUPLEX UPPER.png"
+  ],
+  "clubhouse": [
+    "/assets/floorplans/clubhouse-1.png",
+    "/assets/floorplans/clubhouse-2.png"
+  ],
+  "tower2": [
+    "/assets/floorplans/tower2-1.png",
+    "/assets/floorplans/tower2-2.png",
+    "/assets/floorplans/tower2-3.png",
+    "/assets/floorplans/tower2-4.png"
+  ]
+}
