@@ -18,8 +18,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<First />} />
-        <Route path="/second" element={<Second />} />
+        {/* <Route path="/" element={<First />} /> */}
+        <Route path="/" element={<Second />} />
         <Route path="/overview" element={<OverView/>} />
         <Route path="/location" element={<Location/>} />
         <Route path="/about" element={<About/>} />

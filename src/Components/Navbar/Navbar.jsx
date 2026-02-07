@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className="navbar">
-      <Link to="/second" className="home-link">
+      <Link to="/" className="home-link">
         <div className="back-icon">
           <img src={BackIcon} alt="Back" />
         </div>
