@@ -1,21 +1,19 @@
 .contact-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1d1b1c;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #fff;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .contact-content {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5rem;
-
-  max-height: calc(100vh - 120px); /* Adjust based on Navbar/Footer height */
+  align-items: flex-start;
+  padding: 2rem 5rem;
 }
 
 .address-section,
@@ -26,15 +24,17 @@
 
 .address-section h2 {
   color: #f1c65b;
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
+  margin-top: 1.2rem;
 }
 
 .address-section p {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: #e0e0e0;
-  margin: 0.2rem 0;
+  margin: 0.3rem 0;
+  line-height: 1.4;
 }
 
 .form-section h1 {

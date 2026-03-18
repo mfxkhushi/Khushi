@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './First.css';
 import Touch from '../../assets/touch-icon.png';
+import Logo from '../../assets/CAPELLA-LOGO.png';
+import Logo2 from '../../assets/LOGO2.png';
 import MapVideo from '../../assets/video/Khushi.mp4';
 
 function First() {
@@ -13,6 +15,14 @@ function First() {
         <source src={MapVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      <div className="logo-container">
+        <img src={Logo} alt="Capella Logo" className="first-page-logo" />
+      </div>
+
+      <div className="logo2-container">
+        <img src={Logo2} alt="Khushi Realcon Logo" className="first-page-logo2" />
+      </div>
 
       <div className="overlay-bar">
         <div className="overlay-content">

@@ -161,7 +161,7 @@
   
   height: 105%;
   left: -2.5%;
-  object-fit: cover;
+  object-fit: contain;
   pointer-events: none;
   position: absolute;
   top: -2.5%;

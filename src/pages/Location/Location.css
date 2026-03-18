@@ -7,59 +7,129 @@
   background-color: #1d1b1c;
 }
 
-/* Content between Navbar and Footer */
-.location-content {
-  display: flex;
-  gap: 90px;
-  padding: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex: 1;
-  overflow: auto;
+.location-header-text {
+  text-align: center;
+  padding: 20px 0;
+  color: #eac26b;
 }
 
-/* Left Image */
-.location-image-section {
-  flex: 1 1 400px;
-  max-width: 600px;
-  height: 600px;
-  border-radius: 10px;
+.location-header-text h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Content spacing */
+.location-content {
+  display: flex;
+  gap: 40px;
+  padding: 0 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-top: -10px;
+}
+
+/* Left Image Section */
+.location-image-section {
+  flex: 1;
+  max-width: 500px;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .location-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
   cursor: zoom-in;
 }
 
-/* Right Video (replacing Google Map) */
-.location-video-section {
-  flex: 1 1 400px;
-  max-width: 600px;
-  height: 600px;
-  border-radius: 10px;
+/* Video and Maps Wrapper Section */
+.location-video-wrapper {
+  display: flex;
+  background-color: #000;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  position: relative;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6);
+  flex: 1;
+  max-width: 850px; /* Video (600) + Maps (250) approx */
+  height: 450px;
+}
+
+/* Video Section within Wrapper */
+.location-video-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
 }
 
 .location-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
-/* Video controls styling */
-.location-video::-webkit-media-controls-panel {
-  background-color: rgba(0, 0, 0, 0.7);
+/* Google Maps section in the 'black space' on the right */
+.google-maps-side-section {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #000;
+  border-left: 1px solid #333;
 }
 
-.location-video::-webkit-media-controls-play-button {
-  color: white;
+.google-maps-side-section:hover {
+  background-color: #111;
+}
+
+.google-maps-side-section:hover .maps-icon {
+  transform: scale(1.1);
+}
+
+.maps-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #eac26b;
+  padding: 20px;
+}
+
+.maps-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.5));
+}
+
+.maps-text-primary {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.maps-text-secondary {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 /* Zoom Overlay */
@@ -92,39 +162,24 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(37, 151, 199, 0.9);
+  background: rgba(234, 194, 107, 0.9);
   border: none;
   padding: 0.5rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.close-zoom:hover {
-  background: rgba(27, 111, 150, 1);
-}
-
-/* Footer stays at bottom */
-.location-footer {
-  flex-shrink: 0;
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .location-content {
     flex-direction: column;
-    gap: 15px;
+    padding: 20px;
+    gap: 30px;
+    overflow: auto;
   }
-
-  .location-image-section,
-  .location-video-section {
-    height: 300px;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .location-image-section,
-  .location-video-section {
-    height: 250px;
+  
+  .google-maps-section {
+    flex: none;
+    margin-top: 20px;
   }
 }

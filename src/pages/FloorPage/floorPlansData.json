@@ -1,18 +1,19 @@
 {
   "tower1": [
-    "/Tower1/1 TOWER 1 GROUND FLOOR PLAN.png",
-    "/Tower1/3 TOWER 1 UNIT PLAN TYPE 1.png",
-  "/Tower1/4 TOWER 1 UNIT PLAN TYPE 2.png",
-  "/Tower1/10 TOWER 1 22ND DUPLEX UPPER.png"
+    "/src/assets/imageMapping/FloorPlanTower1/1 TOWER 1 GROUND FLOOR PLAN.png",
+    "/src/assets/imageMapping/FloorPlanTower1/2 TOWER 1 1-21 FLOOR PLAN.png",
+    "/src/assets/imageMapping/FloorPlanTower1/9 TOWER 1 22ND DUPLEX LOWER.png",
+    "/src/assets/imageMapping/FloorPlanTower1/10 TOWER 1 22ND DUPLEX UPPER.png"
   ],
   "clubhouse": [
-    "/assets/floorplans/clubhouse-1.png",
-    "/assets/floorplans/clubhouse-2.png"
+    "/src/assets/imageMapping/clubHousePlan/19 CLUB HOUSE GF_1.png",
+    "/src/assets/imageMapping/clubHousePlan/20 CLUB HOUSE FF_1.png",
+    "/src/assets/imageMapping/clubHousePlan/21 CLUB HOUSE 2ND FLOOR.png",
+    "/src/assets/imageMapping/clubHousePlan/22 CLUB HOUSE TERRACE FLOOR.png"
   ],
   "tower2": [
-    "/assets/floorplans/tower2-1.png",
-    "/assets/floorplans/tower2-2.png",
-    "/assets/floorplans/tower2-3.png",
-    "/assets/floorplans/tower2-4.png"
+    "/src/assets/imageMapping/FloorPlanTower2/11 TOWER 2 GF_2.png",
+    "/src/assets/imageMapping/FloorPlanTower2/12 TOWER 2 1-3RD FLOOR PLAN_1.png",
+    "/src/assets/imageMapping/FloorPlanTower2/13 TOWER 2 4-22 FLOOR PLAN_1.png"
   ]
 }

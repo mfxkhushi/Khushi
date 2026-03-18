@@ -17,6 +17,35 @@
   z-index: -1;
 }
 
+.logo-container {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.first-page-logo {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+}
+
+.logo2-container {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.first-page-logo2 {
+  height: clamp(4rem, 10vw, 6rem);
+  width: auto;
+  object-fit: contain;
+}
+
 .slider-container {
   position: relative;
   width: 100vw;
